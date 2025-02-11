@@ -21,13 +21,17 @@
   }
 
   .process-imges {
-   position: static;
-   order: 1;
-   width: 100%;
+    position: static;
+    order: 1;
+    width: 100%;
   }
 
-  .process-content{
+  .process-content {
     order: 2;
+  }
+
+  .studies-box {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -48,6 +52,10 @@
   .mediation-paragraph {
     width: 100%;
   }
+
+   .studies-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -62,7 +70,10 @@
   .mediation-paragraph {
     width: 100%;
   }
-  h2{
-   font-size: 35px;
+  h2 {
+    font-size: 35px;
+  }
+   .studies-box {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
