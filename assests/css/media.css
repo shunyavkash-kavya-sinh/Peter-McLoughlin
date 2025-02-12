@@ -33,6 +33,10 @@
   .studies-box {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .grid-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -53,8 +57,35 @@
     width: 100%;
   }
 
-   .studies-box {
+  .studies-box {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dispute-title {
+    width: 100%;
+  }
+
+  .grid-box {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 20px 0px;
+  }
+
+  .footer-menu {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .footer-box-content-img {
+    flex-direction: column;
+  }
+
+  .banner {
+    background: url(../images/section/Banner.png),rgba(0, 0, 0, 0.448);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: 65%;
+     background-blend-mode: darken;
   }
 }
 
@@ -73,7 +104,11 @@
   h2 {
     font-size: 35px;
   }
-   .studies-box {
+  .studies-box {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .slider-title {
+    font-size: 25px;
   }
 }

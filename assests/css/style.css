@@ -108,6 +108,11 @@ h3 {
   border-radius: 30px;
   border: 1px solid transparent;
   font-size: 14px;
+  display: inline-block;
+}
+
+header {
+  background: white;
 }
 
 .img-title {
@@ -123,8 +128,8 @@ h3 {
 .menu li a {
   font-size: 14px;
   color: #192647;
-  width: 50px;
   font-weight: 600;
+  width: fit-content;
   transition: all 0.5s ease-in-out;
 }
 
@@ -176,6 +181,7 @@ h3 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
 .banner-content {
@@ -210,9 +216,9 @@ h3 {
   border: 1px solid #ebebeb;
 }
 
-.banner a{
+.banner a {
   display: inline-block;
-  margin:10px 0px;
+  margin: 10px 0px;
 }
 /* Banner end */
 
@@ -276,6 +282,7 @@ h3 {
 
 .mediation {
   padding: 100px 0px;
+  background-color: white;
 }
 
 .mediation-tag {
@@ -309,13 +316,12 @@ h3 {
   font-size: 20px;
   padding: 0;
 }
-/* Mediation start */
+/* Mediation end */
 
 .process {
   padding: 100px 0px;
   background-color: #f8f8f8;
   position: relative;
-  margin: 50px 0px;
 }
 
 .process-tag {
@@ -330,10 +336,6 @@ h3 {
   font-weight: 200;
   max-width: 443px;
   padding: 110px 0px;
-}
-
-.process-content {
-  margin: 10px;
 }
 
 .process-content-imges {
@@ -388,10 +390,11 @@ h3 {
   align-items: center;
   cursor: pointer;
 }
-/* Process start */
+/* Process end */
 
-.studies{
+.studies {
   padding: 100px 0px;
+  background-color: white;
 }
 
 .studies-box {
@@ -417,51 +420,135 @@ h3 {
 
 .studies .btn-primary:hover {
   color: white;
- background-color: black;
- border: 1px solid transparent;
+  background-color: black;
+  border: 1px solid transparent;
 }
 
-.studies-sub-title{
+.studies-sub-title {
   color: #0000007d;
   font-size: 16px;
   margin: 20px 10px;
 }
 
-.studies-title{
+.studies-title {
   color: #192647ea;
   max-width: 302px;
   font-weight: 350;
   margin: 20px 10px;
 }
 
-.right-arow{
+.right-arow {
   border: 1px solid rgba(0, 0, 0, 0.359);
   display: inline-flex;
   border-radius: 50px;
-  padding:13px;
+  padding: 13px;
   margin: 13px;
   cursor: pointer;
 }
 
-.card{
-  border: 1px solid #EFEFEF;
+.card {
+  border: 1px solid #efefef;
 }
-/* studies start */
+/* studies end */
 
-.dispute{
+.dispute {
   padding: 100px 0px;
-  background-color: #ECEDED;
+  background-color: #eceded;
 }
 
-.dispute-title{
-  color: #1C2645;
+.dispute-title {
+  color: #1c2645;
   max-width: 576px;
   line-height: 1.22;
   font-weight: 300;
   margin: 30px 0px;
 }
 
-.dispute .btn-primary{
+.dispute .btn-primary {
   background-color: black;
-  color: #FFFFFF;
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
 }
+
+.dispute .btn-primary:hover {
+  background-color: white;
+  color: #000000;
+}
+/* dispute end */
+
+footer {
+  padding: 70px 0px;
+  background: url(../images/section/pvr.svg);
+  background-repeat: no-repeat;
+  background-color: #192647;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0px 70px;
+  align-items: center;
+}
+
+footer .btn-primary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ebebeb;
+}
+
+.footer-menu li {
+  padding: 30px 0px;
+}
+
+.footer-menu li a {
+  color: white;
+}
+
+.footer-box-content-img {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.civil-img {
+  display: inline-flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.civil-img img {
+  width: 90px;
+}
+
+.sub-title {
+  color: white;
+  font-size: 16px;
+  padding: 30px 0px;
+}
+
+.footer-paragraph {
+  color: rgba(255, 255, 255, 0.418);
+  width: 100%;
+  line-height: 1.6;
+}
+/* footer end */
+
+.mediation .btn-mediaton {
+  padding: 18px 20px;
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  margin: 25px 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+.mediation .btn-mediaton:hover {
+  background-color: transparent;
+  border: 1px solid #EBEBEB;
+  color: #000;
+}
+
