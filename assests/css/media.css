@@ -109,7 +109,7 @@
   }
 
   footer {
-   position: static;
+    position: static;
   }
 }
 
@@ -134,5 +134,9 @@
 
   .slider-title {
     font-size: 25px;
+  }
+
+  .header-logo img {
+    width: 70%;
   }
 }
