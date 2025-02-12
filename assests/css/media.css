@@ -137,6 +137,10 @@
   }
 
   .header-logo img {
-    width: 70%;
+    width: 87%;
+  }
+
+  .img-title{
+    font-size: 10px;
   }
 }
