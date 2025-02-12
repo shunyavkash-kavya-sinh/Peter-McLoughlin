@@ -1,4 +1,4 @@
-@media (max-width: 1023px) {
+@media (max-width: 1024px) {
   .menu {
     display: none;
   }
@@ -36,6 +36,26 @@
 
   .grid-box {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mediation-content-imges {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .mediation-imges {
+    width: 100%;
+  }
+
+  .mediation-imges {
+    position: static;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .frequently-content {
+    width: 100%;
+    margin: 10px;
   }
 }
 
@@ -80,12 +100,16 @@
   }
 
   .banner {
-    background: url(../images/section/Banner.png),rgba(0, 0, 0, 0.448);
+    background: url(../images/section/Banner.png), rgba(0, 0, 0, 0.448);
     background-repeat: no-repeat;
     object-fit: cover;
     background-size: cover;
     background-position: 65%;
-     background-blend-mode: darken;
+    background-blend-mode: darken;
+  }
+
+  footer {
+   position: static;
   }
 }
 
