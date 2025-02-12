@@ -648,5 +648,17 @@ footer .btn-primary {
 .contact-form {
   grid-column: 2/4;
   grid-column-start: 2;
-  background-color: bisque;
+}
+
+.touch {
+  font-size: 45px;
+  color: #192647;
+  padding-bottom: 80px;
+  font-weight: 200;
+}
+
+.contact-title {
+  font-size:14px;
+  color: #192647;
+  padding-bottom: 40px;
 }
