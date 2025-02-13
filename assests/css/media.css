@@ -111,6 +111,23 @@
   footer {
     position: static;
   }
+
+  .conatct-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .contact-form {
+    grid-column: 1/4;
+    grid-column-start: 1;
+  }
+
+  .conatct-paragraph {
+    max-width: 80%;
+  }
+
+  .studies-contact-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 640px) {
@@ -140,7 +157,19 @@
     width: 87%;
   }
 
-  .img-title{
+  .img-title {
     font-size: 10px;
+  }
+
+  .input-box {
+    flex-direction: column;
+  }
+
+  .consider-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .consider-title {
+    max-width: 100%;
   }
 }
