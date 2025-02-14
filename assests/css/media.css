@@ -1,6 +1,24 @@
 @media (max-width: 1024px) {
   .menu {
     display: none;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 8%;
+    background-color: black;
+    flex-direction: column;
+  }
+
+  .menu.active{
+    display: flex;
+  }
+
+  .menu li{
+    margin: 15px 0px;
+  }
+
+  .menu li .hover-text{
+   color: white;
   }
 
   .toggle-menu {
@@ -56,6 +74,24 @@
   .frequently-content {
     width: 100%;
     margin: 10px;
+  }
+
+  .big-banner {
+    position: static;
+  }
+
+  .big-banner img {
+    width: calc(100% + 32px);
+    height: 420px;
+    margin: 0px -16px;
+  }
+
+  .Case-big-imges {
+    height: 100%;
+  }
+
+  .tow-colum-section {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
@@ -127,6 +163,28 @@
 
   .studies-contact-box {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .faqs-point .btn-primary {
+    color: white;
+    display: block;
+    margin: 4px 0px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .searching-box {
+    display: block;
+    padding-bottom: 80px;
+  }
+
+  .privacy-box {
+    flex-direction: column;
+  }
+
+  .privacy-colum-2,
+  .privacy-colum-1 {
+    width: 100%;
   }
 }
 
