@@ -112,7 +112,12 @@ h3 {
 }
 
 header {
-  background: white;
+background: white;
+position: sticky;
+ right: 0;
+ left: 0;
+ top: 0;
+ z-index: 2;
 }
 
 .img-title {
@@ -1056,4 +1061,9 @@ select {
 
 .privacy-colum-1{
   margin: 32px 0px;
+}
+
+.arow.active svg {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }

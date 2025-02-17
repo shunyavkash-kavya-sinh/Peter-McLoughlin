@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $(".toggle-menu").click(function () {
-      $(".menu").toggleClass("active");
+  $(".toggle-menu").click(function () {
+    $(".menu").toggleClass("active");
   });
 });
 
@@ -38,3 +38,42 @@ $(".testimonial-slider").slick({
     // instead of a settings object
   ],
 });
+
+
+// accordion start
+$(document).ready(function () {
+  $(".process-paragraph").hide();
+  $(".arow").click(function () {
+    var content = $(this).closest(".process-box").find(".process-paragraph");
+    if (content.is(":visible")) {
+      content.slideUp();
+      $(this).removeClass("active");
+    } else {
+      $(".process-paragraph").slideUp();
+      $(".arow").removeClass("active");
+      content.slideDown();
+      $(this).addClass("active");
+    }
+  });
+});
+
+$(document).ready(function () {
+  $(".frequently-paragraph").hide();
+  $(".process-box-title, .arow").click(function () {
+      var content = $(this).closest(".process-box").find(".frequently-paragraph");
+      var arrow = $(this).closest(".process-box").find(".arow");
+      if (content.is(":visible")) {
+          content.slideUp();
+          arrow.removeClass("active");
+      } else {
+          $(".frequently-paragraph").slideUp();
+          $(".arow").removeClass("active");
+          content.slideDown(); 
+          arrow.addClass("active");
+      }
+  });
+});
+// accordion end
+
+
+
