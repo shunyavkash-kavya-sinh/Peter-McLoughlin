@@ -16,6 +16,11 @@ body {
   padding: 0px 16px;
 }
 
+:root{
+  --bg-color-light:#eceded;
+  --bg-color-dark:#192647;
+}
+
 a,
 ul,
 li,
@@ -360,7 +365,6 @@ header {
 .process-box-title {
   color: #192647;
   font-size: 22px;
-  padding: 10px 0px 30px 0px;
   font-weight: 500;
 }
 
@@ -377,6 +381,7 @@ header {
   border: 1px solid #7070702e;
   border-left: 0;
   border-right: 0;
+  padding: 20px;
 }
 
 .process-imges {
@@ -449,7 +454,8 @@ header {
 .studies-sub-title {
   color: #0000007d;
   font-size: 16px;
-  margin: 20px 10px;
+  margin: 15px 10px;
+  display: inline-block;
 }
 
 .studies-title {
