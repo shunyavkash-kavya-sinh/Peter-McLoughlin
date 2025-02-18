@@ -59,21 +59,37 @@ $(document).ready(function () {
 
 $(document).ready(function () {
   $(".frequently-paragraph").hide();
-  $(".process-box-title, .arow").click(function () {
-      var content = $(this).closest(".process-box").find(".frequently-paragraph");
-      var arrow = $(this).closest(".process-box").find(".arow");
-      if (content.is(":visible")) {
-          content.slideUp();
-          arrow.removeClass("active");
-      } else {
-          $(".frequently-paragraph").slideUp();
-          $(".arow").removeClass("active");
-          content.slideDown(); 
-          arrow.addClass("active");
-      }
+  $(".process-box-title, .arow-second").click(function () {
+    var content = $(this).closest(".process-box").find(".frequently-paragraph");
+    var arrow = $(this).closest(".process-box").find(".arow-second");
+    if (content.is(":visible")) {
+      content.slideUp();
+      arrow.removeClass("active");
+    } else {
+      $(".frequently-paragraph").slideUp();
+      $(".arow-second").removeClass("active");
+      content.slideDown();
+      arrow.addClass("active");
+    }
   });
 });
 // accordion end
 
+// back to top
+var $backToTop = $(".top-up-btn");
+$backToTop.hide();
+
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 400) {
+    $backToTop.fadeIn();
+  } else {
+    $backToTop.fadeOut();
+  }
+});
+
+$backToTop.on("click", function (e) {
+  $("html, body").animate({ scrollTop: 0 }, 500);
+});
+// back to end
 
 
