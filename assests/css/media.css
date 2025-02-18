@@ -1,16 +1,19 @@
 @media (max-width: 1024px) {
   .menu {
-    display: none;
     position: absolute;
     width: 100%;
     left: 0;
-    top: 60px;
+    top:var(--headerHeight);
     background-color: black;
     flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 500ms ease-in-out;
   }
 
   .menu.active{
-    display: flex;
+    opacity: 1;
+    visibility: visible;
   }
 
   .menu li{

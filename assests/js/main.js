@@ -8,7 +8,8 @@ $(".testimonial-slider").slick({
   infinite: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  arrows: true,
+  arrows: false,
+  dots: true,
   responsive: [
     {
       breakpoint: 1024,
@@ -16,7 +17,7 @@ $(".testimonial-slider").slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        dots: false,
+        dots: true,
       },
     },
     {
@@ -39,23 +40,23 @@ $(".testimonial-slider").slick({
   ],
 });
 
-
 // accordion start
-$(document).ready(function () {
-  $(".process-paragraph").hide();
-  $(".arow").click(function () {
-    var content = $(this).closest(".process-box").find(".process-paragraph");
-    if (content.is(":visible")) {
-      content.slideUp();
-      $(this).removeClass("active");
-    } else {
-      $(".process-paragraph").slideUp();
-      $(".arow").removeClass("active");
-      content.slideDown();
-      $(this).addClass("active");
-    }
-  });
-});
+
+// $(document).ready(function () {
+//   $(".process-paragraph").hide();
+//   $(".process-box-title,.arow").click(function () {
+//     var content = $(this).closest(".process-box").find(".process-paragraph");
+//     if (content.is(":visible")) {
+//       content.slideUp();
+//       $(this).removeClass("active");
+//     } else {
+//       $(".process-paragraph").slideUp();
+//       $(".arow").removeClass("active");
+//       content.slideDown();
+//       $(this).addClass("active");
+//     }
+//   });
+// });
 
 $(document).ready(function () {
   $(".frequently-paragraph").hide();
@@ -72,6 +73,21 @@ $(document).ready(function () {
       arrow.addClass("active");
     }
   });
+});
+
+//  Accrodian
+$(".accordian.active-in .accordion-collapse").slideDown();
+
+$(".title-acodian").click(function () {
+  if ($(this).parents(".accordian").hasClass("active-in")) {
+    $(this).parents(".accordian").removeClass("active-in");
+    $(this).parents().children(".accordion-collapse").slideUp();
+  } else {
+    $(".accordian").removeClass("active-in");
+    $(".accordian .accordion-collapse").slideUp();
+    $(this).parents(".accordian").addClass("active-in");
+    $(this).parents().children(".accordion-collapse").slideDown();
+  }
 });
 // accordion end
 
@@ -92,13 +108,17 @@ $backToTop.on("click", function (e) {
 });
 // back to end
 
- $(document).ready(function () {
-   $(window).on("scroll", function () {
-     if ($(window).scrollTop() > 30) {
-       $("header").addClass("header-change");
-     } else {
-       $("header").removeClass("header-change");
-     }
-   });
- });
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 30) {
+      $("header").addClass("header-change");
+    } else {
+      $("header").removeClass("header-change");
+    }
+  });
+});
 
+var header = $("header").innerHeight() + "px";
+console.log("Header Height : ", header);
+
+$("body").css("--headerHeight", header);

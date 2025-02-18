@@ -6,7 +6,7 @@
 
 body {
   font-family: Maison Neue;
-   cursor: url('https://img.icons8.com/color/26/blue-pointer.png'), auto;
+  cursor: url("https://img.icons8.com/color/26/blue-pointer.png"), auto;
 }
 
 .container {
@@ -182,7 +182,7 @@ header {
   margin: 10px;
 }
 
-.header-change{
+.header-change {
   box-shadow: 1px 1px 40px 1px rgba(0, 0, 0, 0.529);
 }
 /* Header end */
@@ -266,29 +266,31 @@ header {
   text-align: center;
 }
 
-.silder-box {
-  position: relative;
+.slider .slick-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
 }
 
-.silder-box .slick-prev {
+.slider .slick-dots li button {
   color: transparent;
+  width: 28px;
   height: 2px;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.283);
-  border: transparent;
-  left: 50%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.326);
+  transition: all 500ms ease-in-out;
 }
 
-.silder-box .slick-next {
-  color: transparent;
-  height: 2px;
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.283);
-  border: transparent;
-  left: 47%;
+.slider .slick-dots li{
+  display: inline-block;
+  height:1px;
 }
+
+.slider .slick-dots .slick-active button {
+  background-color: #F5F5F5;
+}
+
 /* Slick silder end */
 
 .mediation {
@@ -368,6 +370,7 @@ header {
   line-height: 1.37;
   max-width: 540px;
   padding: 10px 0px;
+  display: none;
 }
 
 .process-box {
@@ -399,7 +402,14 @@ header {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 500ms ease-in-out;
 }
+
+.process .active-in .arow{
+  transform: rotate(180deg);
+}
+
+
 /* Process end */
 
 .studies {
@@ -487,9 +497,9 @@ header {
   color: #000000;
 }
 /* dispute end */
-.main-div{
+.main-div {
   position: relative;
-  z-index:2;
+  z-index: 2;
 }
 
 footer {
@@ -1098,11 +1108,10 @@ select {
   border: 1px solid transparent;
   right: 1%;
   z-index: 3;
-  transition: all 0.5s ease-in-out; 
+  transition: all 0.5s ease-in-out;
 }
 
 .top-up-btn:hover {
   color: black;
   background-color: rgba(245, 245, 245, 0.644);
 }
-
