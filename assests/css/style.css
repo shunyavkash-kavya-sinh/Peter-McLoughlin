@@ -118,7 +118,8 @@ header {
   right: 0;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 4;
+  transition: all 0.5s ease-in-out;
 }
 
 .img-title {
@@ -179,6 +180,10 @@ header {
 .toggle-menu {
   display: none;
   margin: 10px;
+}
+
+.header-change{
+  box-shadow: 1px 1px 40px 1px rgba(0, 0, 0, 0.529);
 }
 /* Header end */
 
@@ -1100,3 +1105,4 @@ select {
   color: black;
   background-color: rgba(245, 245, 245, 0.644);
 }
+

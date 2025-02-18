@@ -92,4 +92,13 @@ $backToTop.on("click", function (e) {
 });
 // back to end
 
+ $(document).ready(function () {
+   $(window).on("scroll", function () {
+     if ($(window).scrollTop() > 30) {
+       $("header").addClass("header-change");
+     } else {
+       $("header").removeClass("header-change");
+     }
+   });
+ });
 
