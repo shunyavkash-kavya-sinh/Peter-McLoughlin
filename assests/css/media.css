@@ -21,7 +21,7 @@
   }
 
   .menu li .hover-text{
-   color: white;
+   color: var(--white);
   }
 
   .toggle-menu {
@@ -169,7 +169,7 @@
   }
 
   .faqs-point .btn-primary {
-    color: white;
+    color: var(--white);
     display: block;
     margin: 4px 0px;
     text-align: center;

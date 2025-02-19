@@ -1,3 +1,10 @@
+:root {
+  --bg-color-light: #eceded;
+  --bg-color-dark: #192647;
+  --primary-text: #192647;
+  --white: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +12,14 @@
 }
 
 body {
-  font-family: Maison Neue;
-  cursor: url("https://img.icons8.com/color/26/blue-pointer.png"), auto;
+  font-family: "Maison Neue", sans-serif;
 }
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1310px;
   margin: 0 auto;
   padding: 0px 16px;
-}
-
-:root{
-  --bg-color-light:#eceded;
-  --bg-color-dark:#192647;
 }
 
 a,
@@ -109,13 +110,98 @@ h3 {
   font-size: 22px;
 }
 
+.btn {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  padding: 16px 20px;
+  border-radius: 30px;
+  transition: all 500ms ease-in-out;
+}
+
 .btn-primary {
+  border: 1px solid transparent;
+  background-color: var(--bg-color-dark);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.btn-main {
+  border: 1px solid transparent;
+  background-color: var(--bg-color-dark);
+  color: var(--white);
+}
+
+.btn-main:hover {
+  border: 1px solid var(--bg-color-dark);
+  background-color: transparent;
+  color: var(--primary-text);
+}
+
+.btn-secondary {
+  border: 1px solid var(--white);
+  background-color: transparent;
+  color: var(--white);
+}
+
+.btn-secondary:hover {
+  border: 1px solid transparent;
+  background-color: var(--bg-color-dark);
+  color: var(--white);
+}
+
+.btn-header {
+  background-color: #f8f8f8;
+  border: 1px solid #ebebeb;
+  transition: all 500ms ease-in-out;
+}
+
+.btn-header:hover {
+  background-color: var(--bg-color-dark);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.btn-last {
+  color: var(--primary-text);
+  border: 1px solid #ebebeb;
+  transition: all 500ms ease-in-out;
+}
+
+.btn-last:hover {
+  background-color: var(--bg-color-dark);
+  border: 1px solid transparent;
+  color: var(--white);
+}
+
+.btn-text {
+  color: inherit;
+  font-size: 20px;
+  padding: 0;
+  background-color: transparent;
+  transition: all 500ms ease-in-out;
+}
+
+.btn-text:hover {
+  color: inherit;
+  font-size: 20px;
+  padding: 0;
+  background-color: transparent;
+  margin-left: 16px;
+}
+
+/* .btn-primary {
   padding: 16px 20px;
   border-radius: 30px;
   border: 1px solid transparent;
   font-size: 14px;
   display: inline-block;
-}
+} */
 
 header {
   background: white;
@@ -129,17 +215,21 @@ header {
 
 .img-title {
   font-size: 12px;
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
 }
 
+.menu li:not(:first-child) {
+  margin-left: 40px;
+}
+
 .menu li {
-  padding: 16px 46px;
+  margin: 40px 0px;
 }
 
 .menu li a {
   font-size: 14px;
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 600;
   width: fit-content;
   transition: all 0.5s ease-in-out;
@@ -147,29 +237,15 @@ header {
 
 .menu li .hover-text {
   font-size: 14px;
-  color: #192647;
-  padding: 10px;
-  border-radius: 10px;
-  width: 50px;
+  color: var(--primary-text);
   font-weight: 600;
-  transition: all 0.5s ease-in-out;
+  transition: all 500ms ease-in-out;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
 }
 
 .menu li .hover-text:hover {
-  color: #ffffff;
-  background-color: #000000c6;
-}
-
-.menu li .btn-primary {
-  background-color: #f8f8f8;
-  border: 1px solid #ebebeb;
-  transition: all 0.4s ease-in-out;
-}
-
-.menu li .btn-primary:hover {
-  background-color: #000;
-  border: 1px solid transparent;
-  color: white;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .toggle-menu {
@@ -208,28 +284,17 @@ header {
 .banner-title {
   font-size: 14px;
   color: #efefef;
-  padding: 17px 0px;
+  padding-bottom: 20px;
   text-transform: uppercase;
   font-weight: 700;
+  display: inline-block;
 }
 
 .main-title {
   color: #f8f8f8;
   font-weight: 200;
   max-width: 606px;
-  margin: 30px 0px;
-}
-
-.banner-content .btn-primary {
-  background-color: #000;
-  color: white;
-  transition: all 0.4s ease-in-out;
-}
-
-.banner-content .btn-primary:hover {
-  background-color: transparent;
-  color: white;
-  border: 1px solid #ebebeb;
+  padding-bottom: 27px;
 }
 
 .banner a {
@@ -239,7 +304,7 @@ header {
 /* Banner end */
 
 .slider {
-  background-color: #192647;
+  background-color: var(--bg-color-dark);
   padding: 100px 0px;
 }
 
@@ -255,7 +320,7 @@ header {
 
 .slider-title {
   text-align: center;
-  color: white;
+  color: var(--white);
   padding: 0px 350px;
   width: 100%;
   line-height: 1.22;
@@ -287,34 +352,35 @@ header {
   transition: all 500ms ease-in-out;
 }
 
-.slider .slick-dots li{
+.slider .slick-dots li {
   display: inline-block;
-  height:1px;
+  height: 1px;
 }
 
 .slider .slick-dots .slick-active button {
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
 }
 
 /* Slick silder end */
 
 .mediation {
   padding: 100px 0px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .mediation-tag {
   color: #7070707a;
   font-size: 14px;
   font-weight: 600;
-  padding: 20px 0px;
+  padding-bottom: 40px;
+  display: inline-block;
 }
 
 .mediation-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
-  max-width: 632px;
-  padding: 30px 0px;
+  max-width: 915px;
+  padding-bottom: 30px;
 }
 
 .mediation-paragraph {
@@ -323,17 +389,9 @@ header {
   font-size: 20px;
   line-height: 1.5;
   max-width: 740px;
+  padding-bottom: 40px;
 }
 
-.mediation-btn {
-  margin: 40px 0px;
-}
-
-.mediation .btn-primary {
-  color: #192647;
-  font-size: 20px;
-  padding: 0;
-}
 /* Mediation end */
 
 .process {
@@ -346,14 +404,15 @@ header {
   color: #7070707a;
   font-size: 14px;
   font-weight: 600;
-  padding: 20px 0px;
+  padding-bottom: 110px;
+  display: inline-block;
 }
 
 .process-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
   max-width: 443px;
-  padding: 110px 0px;
+  padding-bottom: 45px;
 }
 
 .process-content-imges {
@@ -363,7 +422,7 @@ header {
 }
 
 .process-box-title {
-  color: #192647;
+  color: var(--primary-text);
   font-size: 22px;
   font-weight: 500;
 }
@@ -373,7 +432,7 @@ header {
   color: #1926479b;
   line-height: 1.37;
   max-width: 540px;
-  padding: 10px 0px;
+  padding-top: 38px;
   display: none;
 }
 
@@ -381,7 +440,7 @@ header {
   border: 1px solid #7070702e;
   border-left: 0;
   border-right: 0;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 .process-imges {
@@ -410,16 +469,15 @@ header {
   transition: all 500ms ease-in-out;
 }
 
-.process .active-in .arow{
+.process .active-in .arow {
   transform: rotate(180deg);
 }
-
 
 /* Process end */
 
 .studies {
   padding: 100px 0px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .studies-box {
@@ -430,31 +488,17 @@ header {
 }
 
 .studies-tag {
-  color: #192647;
+  color: var(--primary-text);
   font-size: 14px;
   font-weight: 900;
   padding: 20px 0px;
 }
 
-.studies .btn-primary {
-  color: black;
-  border: 1px solid #ebebeb;
-  font-weight: 700;
-  transition: all 0.5s ease-in-out;
-  display: flex;
-  align-items: center;
-}
-
-.studies .btn-primary:hover {
-  color: white;
-  background-color: black;
-  border: 1px solid transparent;
-}
-
 .studies-sub-title {
   color: #0000007d;
   font-size: 16px;
-  margin: 15px 10px;
+  padding: 0px 32px;
+  padding-top: 29px;
   display: inline-block;
 }
 
@@ -462,7 +506,8 @@ header {
   color: #192647ea;
   max-width: 302px;
   font-weight: 350;
-  margin: 20px 10px;
+  padding: 0px 32px;
+  padding-top: 7px;
 }
 
 .right-arow {
@@ -470,18 +515,31 @@ header {
   display: inline-flex;
   border-radius: 50px;
   padding: 13px;
-  margin: 13px;
+  margin: 33px;
+  margin-top: 21px;
   cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.right-arow:hover {
+  background: var(--bg-color-dark);
+  color: var(--white);
 }
 
 .card {
   border: 1px solid #efefef;
 }
+
+.studies-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 /* studies end */
 
 .dispute {
   padding: 100px 0px;
-  background-color: #eceded;
+  background-color: var(--bg-color-light);
 }
 
 .dispute-title {
@@ -489,19 +547,9 @@ header {
   max-width: 576px;
   line-height: 1.22;
   font-weight: 300;
-  margin: 30px 0px;
+  padding-bottom: 26px;
 }
 
-.dispute .btn-primary {
-  background-color: black;
-  color: #ffffff;
-  transition: all 0.3s ease-in-out;
-}
-
-.dispute .btn-primary:hover {
-  background-color: white;
-  color: #000000;
-}
 /* dispute end */
 .main-div {
   position: relative;
@@ -512,7 +560,7 @@ footer {
   padding: 70px 0px;
   background: url(../images/section/pvr.svg);
   background-repeat: no-repeat;
-  background-color: #192647;
+  background-color: var(--bg-color-dark);
   position: sticky;
   bottom: 0;
   width: 100%;
@@ -526,10 +574,8 @@ footer {
   align-items: center;
 }
 
-footer .btn-primary {
-  background-color: transparent;
-  color: white;
-  border: 1px solid #ebebeb;
+.footer-menu li:not(:first-child) {
+  padding: 30px 10px;
 }
 
 .footer-menu li {
@@ -537,7 +583,7 @@ footer .btn-primary {
 }
 
 .footer-menu li a {
-  color: white;
+  color: var(--white);
 }
 
 .footer-box-content-img {
@@ -557,7 +603,7 @@ footer .btn-primary {
 }
 
 .sub-title {
-  color: white;
+  color: var(--white);
   font-size: 16px;
   padding: 30px 0px;
 }
@@ -569,25 +615,11 @@ footer .btn-primary {
 }
 /* footer end */
 
-.mediation .btn-mediaton {
-  padding: 18px 20px;
-  background-color: #000;
-  color: white;
-  font-size: 16px;
-  margin: 25px 0px;
-  transition: all 0.5s ease-in-out;
-}
-
-.mediation .btn-mediaton:hover {
-  background-color: transparent;
-  border: 1px solid #ebebeb;
-  color: #000;
-}
 /* mediation- end */
 
 .mediation-about {
   padding: 100px 0px;
-  background-color: #192647;
+  background-color: var(--bg-color-dark);
   position: relative;
 }
 
@@ -596,19 +628,20 @@ footer .btn-primary {
   grid-template-columns: repeat(2, 1fr);
   gap: 0px 92px;
   align-items: center;
+  color: var(--white);
 }
 
 .ma-subtitle {
-  color: #ffffff76;
+  color: var(--white);
   font-size: 14px;
-  padding: 60px 0px;
+  padding-bottom: 64px;
   display: inline-block;
 }
 
 .ma-title {
-  color: white;
+  color: var(--white);
   font-weight: 100;
-  padding: 30px 0px;
+  padding-bottom: 45px;
 }
 
 .ma-paragraph {
@@ -618,10 +651,8 @@ footer .btn-primary {
   line-height: 1.6;
 }
 
-.mediation-about .btn-primary {
-  padding: 40px 0px;
-  color: #ffffff;
-  font-size: 20px;
+.paragraph-box {
+  padding-bottom: 53px;
 }
 
 .mediation-imges {
@@ -644,11 +675,11 @@ footer .btn-primary {
 
 .frequently {
   padding: 100px 0px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .frequently-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
   max-width: 100%;
   padding: 55px 0px;
@@ -684,14 +715,14 @@ footer .btn-primary {
 }
 
 .touch {
-  color: #192647;
+  color: var(--primary-text);
   padding-bottom: 50px;
   font-weight: 200;
 }
 
 .contact-title {
   font-size: 14px;
-  color: #192647;
+  color: var(--primary-text);
   padding-bottom: 40px;
 }
 
@@ -705,7 +736,7 @@ footer .btn-primary {
 .conatct-paragraph {
   font-size: 14px;
   max-width: 159px;
-  color: #192647;
+  color: var(--primary-text);
   line-height: 1.4;
   padding: 9px 0px;
 }
@@ -766,24 +797,6 @@ select {
   border-radius: 20px;
 }
 
-.contact .btn-primary {
-  background-color: #000;
-  color: white;
-  transition: all 0.5s ease-in-out;
-  border: 1px solid transparent;
-  display: block;
-  width: 100px;
-  font-weight: 900;
-  text-align: center;
-  height: 50px;
-}
-
-.contact .btn-primary:hover {
-  background-color: transparent;
-  color: black;
-  border: 1px solid #ebebebf4;
-}
-
 .studies-contact {
   padding: 60px 0px;
   background-color: #f8f8f8;
@@ -795,9 +808,6 @@ select {
   gap: 60px;
 }
 
-.studies-img img {
-  object-fit: cover;
-}
 /* contact-pages end */
 
 .consider-box {
@@ -808,7 +818,7 @@ select {
 }
 
 .consider {
-  background: #eceded;
+  background: var(--bg-color-light);
   padding: 100px 0px;
 }
 
@@ -821,7 +831,7 @@ select {
 }
 
 .consider-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
   max-width: 80%;
   padding: 60px 0px;
@@ -837,7 +847,7 @@ select {
 
 .consider-paragraph {
   font-size: 16px;
-  color: #192647;
+  color: var(--primary-text);
   padding: 20px 0px;
   line-height: 1.6;
   font-weight: 200;
@@ -859,7 +869,7 @@ select {
 
 .Case-Studies-imges {
   padding: 100px 0px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .all-button {
@@ -868,20 +878,6 @@ select {
   display: flex;
   flex-wrap: nowrap;
   gap: 10px;
-}
-
-.Case-Studies-imges .btn-primary {
-  background-color: black;
-  color: white;
-  white-space: nowrap;
-  transition: all 0.5s ease-in-out;
-  margin: 10px 0px;
-}
-
-.Case-Studies-imges .btn-primary:hover {
-  background-color: white;
-  color: black;
-  border: 1px solid #192647;
 }
 
 .imges-button {
@@ -893,7 +889,7 @@ select {
   position: relative;
   max-width: 100%;
   height: 100vh;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .big-banner {
@@ -912,7 +908,7 @@ select {
 
 .dispute-feeling {
   padding-bottom: 120px;
-  background-color: white;
+  background-color: var(--white);
 }
 
 .tow-colum-section {
@@ -925,7 +921,7 @@ select {
 }
 
 .first-colum-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
   max-width: 720px;
   padding: 20px 0px;
@@ -981,11 +977,6 @@ select {
   max-width: 848px;
 }
 
-.our-box .btn-primary {
-  padding: 0px;
-  color: #192647;
-  font-size: 20px;
-}
 /* our-box end */
 
 .font-supporter {
@@ -999,7 +990,7 @@ select {
 }
 
 .faqs-title {
-  color: #192647;
+  color: var(--primary-text);
   font-weight: 200;
   text-align: center;
   max-width: 850px;
@@ -1007,7 +998,7 @@ select {
 }
 
 .faqs-paragraph {
-  color: #192647;
+  color: var(--primary-text);
   line-height: 1.6;
   font-weight: 200;
   max-width: 850px;
@@ -1028,12 +1019,6 @@ select {
   border: 2px solid #71717178;
   background-color: #f8f8f8;
   padding: 14px;
-}
-
-.faqs-point .btn-primary {
-  background-color: #1c2645;
-  color: white;
-  display: inline-block;
 }
 
 .searching-box {
@@ -1069,7 +1054,7 @@ select {
 }
 
 .privacy .main-title {
-  color: #192647;
+  color: var(--primary-text);
   padding: 10px 0px;
 }
 
@@ -1081,7 +1066,7 @@ select {
 }
 
 .main-title-terms {
-  color: #192647;
+  color: var(--primary-text);
   padding: 10px 0px;
   font-size: 30px;
   font-weight: 200;
@@ -1101,7 +1086,7 @@ select {
 }
 
 .top-up-btn {
-  color: white;
+  color: var(--white);
   background-color: blue;
   width: 60px;
   height: 60px;
