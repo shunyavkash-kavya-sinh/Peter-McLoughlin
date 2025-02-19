@@ -3,7 +3,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top:var(--headerHeight);
+    top: var(--headerHeight);
     background-color: black;
     flex-direction: column;
     opacity: 0;
@@ -11,17 +11,25 @@
     transition: all 500ms ease-in-out;
   }
 
-  .menu.active{
+  .menu.active {
     opacity: 1;
     visibility: visible;
   }
 
-  .menu li{
+  .menu li {
     margin: 15px 0px;
   }
 
-  .menu li .hover-text{
-   color: var(--white);
+  .menu li .hover-text {
+    color: var(--white);
+  }
+
+  .menu li:not(:first-child) {
+    margin-left: 0px;
+  }
+
+  .menu li{
+    padding: 10px 0px;
   }
 
   .toggle-menu {
